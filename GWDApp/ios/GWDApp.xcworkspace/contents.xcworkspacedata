@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Pods/../AffdexSDK.h">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/../AffdexSDK.m">
+   </FileRef>
+   <FileRef
       location = "group:GWDApp.xcodeproj">
    </FileRef>
    <FileRef

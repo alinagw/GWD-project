@@ -441,3 +441,5 @@ affdex.PhotoDetector = function (faceMode) {
         affdex.FrameDetector.prototype.process.call(self, img, timeStamp);
     };
 };
+
+export default affdex;

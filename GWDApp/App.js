@@ -2,10 +2,13 @@
 import React, { PureComponent } from 'react';
 import { AppRegistry, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';
-import affdex from 'src/APIs/affdex.js';
+import affdex from './src/APIs/affdex'
 
 export default class App extends PureComponent {
   render() {
+    let faceMode = affdex.FaceDetectorMode.LARGE_FACES;
+    // let detector = new affdex.CameraDetector(null, 500, 500, faceMode);
+
     return (
       <View style={styles.container}>
         <RNCamera
@@ -32,6 +35,15 @@ export default class App extends PureComponent {
       console.log(data.uri);
     }
   };
+
+  // convertToImageData(imgData) {
+  //   let arr = this.convertDataURIToBinary(imgData.uri);
+  //   let img = new ImageData(arr, imgData.width, imgData.height);
+  //   console.log(img);
+  //   return img;
+  // }
+
+ 
 }
 
 const styles = StyleSheet.create({

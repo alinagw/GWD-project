@@ -34,6 +34,8 @@ target 'GWDApp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'AffdexSDK-iOS'
+
   target 'GWDAppTests' do
     inherit! :search_paths
     # Pods for testing

@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react';
 import { AppRegistry, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import Canvas from 'react-native-canvas';
 import affdex from './src/APIs/affdex'
 
 export default class App extends PureComponent {
@@ -10,21 +11,23 @@ export default class App extends PureComponent {
     // let detector = new affdex.CameraDetector(null, 500, 500, faceMode);
 
     return (
-      <View style={styles.container}>
-        <RNCamera
-          ref={ref => {
-            this.camera = ref;
-          }}
-          style={styles.preview}
-          type={RNCamera.Constants.Type.back}
-          captureAudio={false}
-        />
-        <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
-          <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
-            <Text style={{ fontSize: 14 }}> SNAP </Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      <Canvas ref={this.handleCanvas}/>
+      // <View style={styles.container}>
+        
+      //   <RNCamera
+      //     ref={ref => {
+      //       this.camera = ref;
+      //     }}
+      //     style={styles.preview}
+      //     type={RNCamera.Constants.Type.back}
+      //     captureAudio={false}
+      //   />
+      //   <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
+      //     <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
+      //       <Text style={{ fontSize: 14 }}> SNAP </Text>
+      //     </TouchableOpacity>
+      //   </View>
+      // </View>
     );
   }
 
@@ -35,6 +38,12 @@ export default class App extends PureComponent {
       console.log(data.uri);
     }
   };
+
+  handleCanvas = (canvas) => {
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'purple';
+    ctx.fillRect(0, 0, 100, 100);
+  }
 
   // convertToImageData(imgData) {
   //   let arr = this.convertDataURIToBinary(imgData.uri);

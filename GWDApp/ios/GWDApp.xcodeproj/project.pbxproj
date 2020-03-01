@@ -59,6 +59,7 @@
 		2D02E47B1E0B4A5D006451C7 /* GWDApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GWDApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* GWDApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GWDApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB5201A806209AA253C2A59 /* Pods-GWDApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWDApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-GWDApp-tvOSTests/Pods-GWDApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E3DC526240C5D1B0058A272 /* libreact-native-webview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-webview.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65C1FECBE1ED976C7628A1 /* libPods-GWDAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GWDAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCD118D2CA18128DC4E8E02 /* Pods-GWDApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWDApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-GWDApp-tvOS/Pods-GWDApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		9340C1C3762D015B48475AE0 /* Pods-GWDApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWDApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-GWDApp-tvOSTests/Pods-GWDApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E3DC526240C5D1B0058A272 /* libreact-native-webview.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				09042C4BE0775BC4E617FCFE /* libPods-GWDApp.a */,

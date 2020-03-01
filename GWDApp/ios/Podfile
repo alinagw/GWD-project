@@ -36,6 +36,8 @@ target 'GWDApp' do
 
   pod 'AffdexSDK-iOS'
 
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
   target 'GWDAppTests' do
     inherit! :search_paths
     # Pods for testing

@@ -1,6 +1,6 @@
 "use strict";
 //Global namespace
-
+import { Thread } from 'react-native-threads'
 var affdex = affdex || {};
 affdex.version = "3.2.583-b86b1d2"
 affdex.getAffdexDotJsLocation = function () {
@@ -27,13 +27,14 @@ function XHRWorker(url, ready, scope) {
        This works but we need to delegate using the worker when the resource is loaded (XHR call finishes)
     */
     var oReq = new XMLHttpRequest();
-    oReq.addEventListener('load', function () {
-        console.log(window.URL.createObjectURL(new Blob([this.responseText])));
-        var worker = new Worker(window.URL.createObjectURL(new Blob([this.responseText])));
+    oReq.onload = function () {
+
+        var worker = new Thread("worker.thread.js");
         if (ready) {
             ready.call(scope, worker);
         }
-    }, oReq);
+    };
+
     oReq.open("get", url, true);
     oReq.setRequestHeader('Access-Control-Allow-Origin', '*');
     oReq.setRequestHeader('Access-Control-Allow-Headers', '*');

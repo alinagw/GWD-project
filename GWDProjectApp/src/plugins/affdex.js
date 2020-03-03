@@ -1,5 +1,6 @@
 "use strict";
 //Global namespace
+
 var affdex = affdex || {};
 affdex.version = "3.2.583-b86b1d2"
 affdex.getAffdexDotJsLocation = function () {
@@ -27,6 +28,7 @@ function XHRWorker(url, ready, scope) {
     */
     var oReq = new XMLHttpRequest();
     oReq.addEventListener('load', function () {
+        console.log(window.URL.createObjectURL(new Blob([this.responseText])));
         var worker = new Worker(window.URL.createObjectURL(new Blob([this.responseText])));
         if (ready) {
             ready.call(scope, worker);
@@ -218,7 +220,8 @@ affdex.Detector = function () {
 //By children classes
 affdex.Detector.prototype.start = function () {
     if (!this.isRunning) {
-        var url = affdex.getAffdexDotJsLocation();
+        // var url = affdex.getAffdexDotJsLocation();
+        var url = "https://download.affectiva.com/js/3.2.1/"
         XHRWorker(url + "affdex-worker.js", function (worker) {
             this.worker = worker;
             this.worker.onmessage = this.onWorkerMessage;
